@@ -1,0 +1,31 @@
+#!/bin/bash
+echo "
+░█████╗░░░░░░░███╗░░░███╗██╗░██████╗░██████╗░░█████╗░████████╗███████╗
+██╔══██╗░░░░░░████╗░████║██║██╔════╝░██╔══██╗██╔══██╗╚══██╔══╝██╔════╝
+██║░░╚═╝█████╗██╔████╔██║██║██║░░██╗░██████╔╝███████║░░░██║░░░█████╗░░
+██║░░██╗╚════╝██║╚██╔╝██║██║██║░░╚██╗██╔══██╗██╔══██║░░░██║░░░██╔══╝░░
+╚█████╔╝░░░░░░██║░╚═╝░██║██║╚██████╔╝██║░░██║██║░░██║░░░██║░░░███████╗
+░╚════╝░░░░░░░╚═╝░░░░░╚═╝╚═╝░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚══════╝
+Made by: CyberRide
+github: https://github.com/CyberRide
+[1]  Upload To Web-Server        
+[2]  Exit" | lolcat;
+echo -n -e "${GREEN}c-migrate >>${NC} "
+read choice 
+
+if [ $choice == 1 ]; then
+clear
+bash .upload
+fi
+if [ $choice == 2 ]; then
+echo "Are You Sure You Want To Exit c-migrate? (y/n)"
+	read input
+    if [ "$input" = "y" ]; then
+    clear
+    echo "Thank You" | lolcat;
+    exit
+else
+clear
+cm  
+    fi
+fi

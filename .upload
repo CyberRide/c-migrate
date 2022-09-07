@@ -1,0 +1,44 @@
+#!/bin/bash -e
+echo "
+░█████╗░░░░░░░███╗░░░███╗██╗░██████╗░██████╗░░█████╗░████████╗███████╗
+██╔══██╗░░░░░░████╗░████║██║██╔════╝░██╔══██╗██╔══██╗╚══██╔══╝██╔════╝
+██║░░╚═╝█████╗██╔████╔██║██║██║░░██╗░██████╔╝███████║░░░██║░░░█████╗░░
+██║░░██╗╚════╝██║╚██╔╝██║██║██║░░╚██╗██╔══██╗██╔══██║░░░██║░░░██╔══╝░░
+╚█████╔╝░░░░░░██║░╚═╝░██║██║╚██████╔╝██║░░██║██║░░██║░░░██║░░░███████╗
+░╚════╝░░░░░░░╚═╝░░░░░╚═╝╚═╝░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚══════╝
+Made by: CyberRide
+github: https://github.com/CyberRide
+[1]  Upload To Server
+[2]  Upload To Cpanel             
+[3]  Exit" 
+echo -n -e "${GREEN}c-migrate >>${NC} "
+read choice
+if [ $choice == 1 ]; then
+echo "File Uploader"| lolcat;
+echo "Path of local file that you want to upload on server e.g(Documents/cm.zip)"| lolcat;
+read path
+echo "Path of server folder where you upload file on server e.g(/var/www/html)"| lolcat;
+read sef
+echo "Ip address of your linux server"| lolcat;
+read Ip
+echo "Username of your linux server"| lolcat;
+read user
+source d.txt
+scp -r $path $user@$Ip:$sef
+fi
+if [ $choice == 2 ]; then
+echo "Coming Soon" | lolcat;
+fi
+ 
+if [ $choice == 3 ]; then
+echo "Are You Sure You Want To Exit c-migrate? (y/n)"
+	read input
+    if [ "$input" = "y" ]; then
+    exit
+    clear
+    echo "Thank You" | lolcat;
+else
+clear
+bash cm.sh  
+    fi
+fi
