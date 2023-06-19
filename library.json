@@ -1,0 +1,18 @@
+{
+  "SimpleDirectoryReader": {
+    "id": "file",
+    "author": "jerryjliu"
+  },
+  "PDFReader": {
+    "id": "file/pdf",
+    "author": "ravi03071991"
+  },
+  "CJKPDFReader": {
+    "id": "file/cjk_pdf",
+    "author": "JiroShimaya",
+    "keywords": ["Japanese", "Chinese", "Korean"]
+  },
+  "DocxReader": {
+    "id": "file/docx"
+  }
+}
